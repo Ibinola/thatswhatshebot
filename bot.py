@@ -1,18 +1,38 @@
 import discord
+import requests
+import os
+from dotenv import load_dotenv
 
-class MyClient(discord.Client):
-    async def on_ready(self):
-        print('Logged on as {0}!'.format(self.user))
-      
-    async def on_message(self, message):
-        if message.author == self.user:
-            return
-        
-        if message.content == 'hello':
-            await message.channel.send('Hello World!')
+load_dotenv()
+
+token = os.getenv('TOKEN')
 
 intents = discord.Intents.default()
 intents.message_content = True
 
-client = MyClient(intents=intents)
-client.run('MTEzNDQwNDAyMjc5OTk2NjI5OA.GAcj4m.NX9uexLLQK6Oxu-QaTGzo2-cF3Fk8p-f9RJL4I') 
+client = discord.Client(intents=intents)
+
+def get_quotes():
+    response = requests.get('https://officeapi.akashrajpurohit.com/quote/random')
+    if response.status_code == 200:
+        json_data = response.json()
+        quote = json_data.get('quote')
+        character = json_data.get('character')
+        character_avatar_url = json_data.get('character_avatar_url')
+        return (f" \"{quote}\" - {character} {character_avatar_url}")
+    
+
+@client.event
+async def on_ready():
+    print(f'Bot is live!')
+
+@client.event
+async def on_message(message):
+    if message.author == client.user:
+        return
+
+    if message.content == '!quote':
+        await message.channel.send(get_quotes())
+
+
+client.run(token)
