@@ -18,8 +18,7 @@ def get_quotes():
         json_data = response.json()
         quote = json_data.get('quote')
         character = json_data.get('character')
-        character_avatar_url = json_data.get('character_avatar_url')
-        return (f" \"{quote}\" - {character} {character_avatar_url}")
+        return (f" \"{quote}\" - {character}")
     
 
 @client.event
