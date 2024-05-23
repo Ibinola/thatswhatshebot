@@ -49,7 +49,7 @@ TOKEN=your_discord_bot_token
 
 ### Bot in action
 
-![alt text](image.png)
+![bot-replying-to-a-quote-command](image-1.png)
 
 ### Running the bot
 
@@ -77,4 +77,4 @@ Distributed under the MIT license. See `LICENSE` for more information.
 
 - [ ] Host somewhere
 - [ ] explore more features?
-- [ ] 
+- [ ] add slash commands
