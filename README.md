@@ -77,4 +77,4 @@ Distributed under the MIT license. See `LICENSE` for more information.
 
 - [ ] Host somewhere
 - [ ] explore more features?
-- [ ] add slash commands
+- [x] add slash command
