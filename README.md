@@ -49,7 +49,7 @@ TOKEN=your_discord_bot_token
 
 ### Bot in action
 
-![bot-replying-to-a-quote-command](image-1.png)
+![bot-replying-to-a-quote-command](image.png)
 
 ### Running the bot
 
