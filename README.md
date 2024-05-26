@@ -13,17 +13,14 @@
 ███████║██║  ██║███████╗██████╔╝╚██████╔╝   ██║                              
 ╚══════╝╚═╝  ╚═╝╚══════╝╚═════╝  ╚═════╝    ╚═╝                           
                                                                              
-discord bot to send quotes from the tv show the office
 </pre>
 
-A Python bot delivering random quotes from "The Office" to your Discord.
 
 ## Table of Contents
 
 - [Installation](#installation)
-- [Usage](#usage)
-  - [Configuration](#configuration)
-  - [Running the Bot](#running-the-bot)
+- [Configuration](#configuration)
+- [Running the Bot](#running-the-bot)
 - [Development Setup](#development-setup)
 - [Meta](#meta)
 - [TODO](#todo)
@@ -31,13 +28,17 @@ A Python bot delivering random quotes from "The Office" to your Discord.
 
 ## Installation
 
-pip install this repo.
+First, clone the repository:
+
+```sh
+git clone https://github.com/Ibinola/your-repo-name.git
+cd your-repo-name
+```
+Then install necessary packages
 
 ```sh
 pip install discord requests python-dotenv
 ```
-
-## Usage example
 
 ### Configuration
 Create a .env file in the project directory and add your Discord bot token:
@@ -62,7 +63,10 @@ python bot.py
 Clone this repo and install packages
 
 ```sh
-pip3 install
+git clone https://github.com/Ibinola/your-repo-name.git
+cd your-repo-name
+pip install -r requirements.txt
+
 ```
 
 ## Meta
