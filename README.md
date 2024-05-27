@@ -82,3 +82,5 @@ Distributed under the MIT license. See `LICENSE` for more information.
 - [ ] Host somewhere
 - [ ] explore more features?
 - [x] add slash command
+- [ ] handle errors properly
+- [ ] write tests
